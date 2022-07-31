@@ -28,13 +28,13 @@ app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'pug');
 
 //Configuring app
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../public')));
 
 //Initializing app connection with Routers
+app.use('/', indexRouter);
+app.use('/feed', feedRouter)
+app.use('/business', businessRouter);
+app.use('/login', loginRouter)
+app.use('/register', registerRouter)
 
 //Catch 404 and forward to error handler
 app.use(function(req, res, next) {
