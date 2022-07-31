@@ -1,3 +1,5 @@
+var mongoose = require('mongoose');
+
 describe('Create', () => {
     let connect;
     let db;
