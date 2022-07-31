@@ -1,8 +1,10 @@
 var express = require("express");
 var router = express.Router();
 var user = require("../models/registerModel.js");
+require('dotenv').config()
 
 //SMS API Variables
+const twilio = require('twilio');
 const client = require("twilio")(process.env.SID, process.env.auth);
 
 //Email API Variable
