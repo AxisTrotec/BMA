@@ -27,13 +27,13 @@ it("Should create a fake account", () => {
     const testUser = {username: "testUser", email: "testUser@test.com", phone: "7783201682", password: "test21321"}
     users.insertOne(testUser)
 
-    const created = await users.findOne({email: "testUser@test.com"})
+    const created =  users.findOne({email: "testUser@test.com"})
     expect(created.password).toEqual(testUser.password)
 })
 
 it("Should be able to login", () => {
     const users = db.collection('users')
 
-    const created = await users.findOne({email: "axistrotec@outlook.com"})
+    const created = users.findOne({email: "axistrotec@outlook.com"})
     expect(created.password).toEqual("admin21321")
 })
