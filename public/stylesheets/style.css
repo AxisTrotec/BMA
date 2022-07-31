@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Mono:wght@100&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #4A5B6E;
+}
+
+input:focus, input{
+    border: none;
+    outline: none;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+        'topbar topbar topbar topbar topbar topbar topbar'
+        'sidebar couponbar couponbar couponbar couponbar couponbar couponbar'
+        'sidebar promotionbar promotionbar promotionbar salesbar salesbar salesbar'
+        'sidebar promotionbar promotionbar promotionbar salesbar salesbar salesbar'
+        'footerbar footerbar footerbar footerbar footerbar footerbar footerbar';
+    row-gap: 10px;
+    column-gap: 10px;
+}   
+
+#sidebar-panel{
+    grid-area: sidebar;
+    height: 78vh;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    background-color: #5C6C84;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    margin: 70px 50px 50px 50px;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#sidebar-panel a {
+    padding: 8px 10px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F8CDC5;
+}
+
+#sidebar-panel li {
+    list-style: none;
+    border-left: 1px solid #9EC1CC;
+    margin: 0 0 20px 20px;
+}
+
+#topbar-panel {
+    grid-area: topbar;
+    background-color: #5C6C84;
+    overflow: hidden;
+    margin: 0 50px 0 40px;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#topbar-panel a {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    color: #F8CDC5;
+}
+
+#topbar-panel li {
+    list-style: none;
+}
+
+#couponbar-panel {
+    grid-area: couponbar;
+    background-color: #5C6C84;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 7px 50px 7px 0px;
+    color: #F8CDC5;
+}
+
+#promotionbar-panel {
+    grid-area: promotionbar;
+    background-color: #5C6C84;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0px 7px 0px 0px;
+    color: #F8CDC5;
+}
+
+#salesbar-panel {
+    grid-area: salesbar;
+    background-color: #5C6C84;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0px 50px 0px 0px;
+    color: #F8CDC5;
+}
+
+#footerbar-panel {
+    grid-area: footerbar;
+    background-color: #5C6C84;
+    overflow: hidden;
+    margin: 0 50px 0 50px;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 95%;
+    color: #F8CDC5;
+}
+
+#formWrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F8CDC5;
+    background-color: #5C6C84;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid #5C6C84;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px
+}
+
+#formWrapper input {
+    background-color: #5C6C84;
+    border-bottom: 1px solid #9EC1CC;
+    color: #F8CDC5;
+}
+
+#btn {
+    background-color: #BC4860;
+    color: #F8CDC5;
+    border: none;
+    padding: 5px
+}
+
+#data {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #BC4860;
+}
+
+#home {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F8CDC5;
+    background-color: #4A5B6E;
+    border: none;
+    font-size: 50px;
+    font-weight: bolder;
+}
