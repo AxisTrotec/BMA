@@ -1,8 +1,3 @@
-const app = require('../src/app.js')
-var express = require('express');
-var router = express.Router();
-var mongoose = require('mongoose');
-
 describe('Create', () => {
     let connect;
     let db;
