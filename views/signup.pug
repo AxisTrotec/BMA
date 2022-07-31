@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+    a(href='/')
+        button#home(type="button") BMA
+    #formWrapper
+        h1= title
+        form(name="login", method="post")
+                div.input
+                    span.label Email <br />
+                    input(type="string", name="email" required)
+                div.input
+                    span.label Password <br />
+                    input(type="password", name="password" required)
+                div.actions
+                    <br />
+                    input(type="submit", value="login")
+
+        p Don't have an account?
+        a(href="/register")
+            button#btn(type="button") Register for free!
+        p Already have an account?
+        a(href="/login")
+            button#btn(type="button") Sign in now!
+
+    h1#data=data
