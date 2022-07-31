@@ -25,7 +25,7 @@ it("Should create a fake account", () => {
     const users = db.collection('users')
 
     const testUser = {username: "testUser", email: "testUser@test.com", phone: "7783201682", password: "test21321"}
-    await users.insertOne(testUser)
+    users.insertOne(testUser)
 
     const created = await users.findOne({email: "testUser@test.com"})
     expect(created.password).toEqual(testUser.password)
